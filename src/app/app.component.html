@@ -1,1 +1,21 @@
-<h1>Hello, {{ title }}</h1>
+<p-splitter [style]="{ height: '300px' }" styleClass="mb-5" layout="vertical">
+  <ng-template pTemplate>
+      <div class="col flex align-items-center justify-content-center">
+
+        <p-card header=" {{ title }}">
+          <p class="m-0">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque
+              quas!
+          </p>
+        </p-card>
+
+      </div>
+  </ng-template>
+  <ng-template pTemplate>
+      <div class="col flex align-items-center justify-content-center">
+        
+        <p-button>Click me</p-button>
+
+      </div>
+  </ng-template>
+</p-splitter>
