@@ -1,7 +1,7 @@
-export interface Products {
+export interface IProduct {
     id: number;
     name: string;
-    status: string;
+    active: boolean;
     category: {
       id: number,
       name: string
