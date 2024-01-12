@@ -16,7 +16,7 @@
   "products": [
     {
       "id": "1",
-      "name": "Iphone",
+      "name": "Coca-cola",
       "active": false,
       "category": {
         "id": "1",
