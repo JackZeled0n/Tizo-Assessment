@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { ProductComponent } from '../../../product/components/product/product.component'; 
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [],
+  imports: [ RouterOutlet, ProductComponent],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
 })
