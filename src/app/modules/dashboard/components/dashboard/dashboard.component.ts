@@ -1,14 +1,32 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 import { ProductComponent } from '../../../product/components/product/product.component'; 
+import { CategoryComponent } from '../../../category/components/category/category.component';
+import { UserComponent } from '../../../user/components/user/user.component';
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [ RouterOutlet, ProductComponent],
+  imports: [ RouterOutlet, ProductComponent, CategoryComponent, UserComponent ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
 })
 export class DashboardComponent {
+
+  constructor(
+    private router: Router
+  ) {}
+
+  products(): void {
+    this.router.navigate(['/dashboard/product'])
+  }
+
+  categories(): void {
+    this.router.navigate(['/dashboard/category'])
+  }
+
+  users(): void {
+    this.router.navigate(['/dashboard/user'])
+  }
 
 }
