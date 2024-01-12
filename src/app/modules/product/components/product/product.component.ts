@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../../services/product.service';
 import { takeUntil } from 'rxjs';
 import { CommonModule } from '@angular/common';
+import { IProduct } from '../../../../core/interfaces/products';
 
 @Component({
   selector: 'app-product',
@@ -17,7 +18,7 @@ export class ProductComponent implements OnInit {
     private productService: ProductService
   ) {}
 
-  productsArray: any = [];
+  productsArray: IProduct[] = [];
 
   ngOnInit(): void {
     this.getProducts();
@@ -26,20 +27,20 @@ export class ProductComponent implements OnInit {
   getProducts(): void {
     this.productService
     .getProducts()
-    .subscribe((data: any) => {
+    .subscribe((data: IProduct[]) => {
       this.productsArray = data;
     });
   }
 
-  updateStatusProduct(id: any): void {
-    const product = this.productsArray.find((p: { id: any; }) => p.id === id);
+  updateStatusProduct(id: number): void {
+    const product = this.productsArray.find(p => p.id === id);
     if (product) {
-      product.status = false;
-    }
+      product.active = false;
 
-    this.productService.updateProduct(product).subscribe(() => {
-      console.log('Campo actualizado correctamente');
-    });
+      this.productService.updateProduct(product).subscribe(() => {
+        console.log('Campo actualizado correctamente');
+      });
+    }
   }
 
 }

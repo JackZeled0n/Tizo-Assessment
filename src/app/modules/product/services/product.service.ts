@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { IProduct } from '../../../core/interfaces/products';
 
 @Injectable({
   providedIn: 'root'
@@ -14,11 +15,11 @@ export class ProductService {
 
   apiUrl = 'http://localhost:3000/products';
 
-  getProducts(): any {
-    return this.http.get<any>(this.apiUrl);
+  getProducts() {
+    return this.http.get<IProduct[]>(this.apiUrl);
   }
 
-  updateProduct(product: any): any {
+  updateProduct(product: IProduct) {
     return this.http.put( `${this.apiUrl}/${product.id}`, product)
   }
 }
