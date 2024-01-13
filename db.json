@@ -1,14 +1,46 @@
 {
-    "user": [
-      { "id": "1", "username": "admin", "password": "123" },
-      { "id": "2", "username": "user", "password": "123" }
-    ],
-    "products": [
-        { "id": "1", "name": "coca-cola", "category": { "id": "1", "name": "drinks"} },
-        { "id": "2", "name": "Iphone", "category":  { "id": "2", "name": "smartphones" } }
-    ],
-    "categories": [
-        { "id": "1", "name": "drinks"},
-        { "id": "2", "name": "smartphones" }
-    ]
-  }
+  "user": [
+    {
+      "id": "1",
+      "username": "testAdmin",
+      "role": "admin",
+      "password": "123"
+    },
+    {
+      "id": "2",
+      "username": "testUser",
+      "role": "user",
+      "password": "123"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "Coca-cola",
+      "active": false,
+      "category": {
+        "id": "1",
+        "name": "drinks"
+      }
+    },
+    {
+      "id": "2",
+      "name": "Iphone",
+      "active": false,
+      "category": {
+        "id": "2",
+        "name": "smartphones"
+      }
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "drinks"
+    },
+    {
+      "id": "2",
+      "name": "smartphones"
+    }
+  ]
+}
