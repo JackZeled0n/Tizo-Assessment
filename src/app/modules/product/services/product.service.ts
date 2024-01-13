@@ -19,6 +19,10 @@ export class ProductService {
     return this.http.get<IProduct[]>(this.apiUrl);
   }
 
+  saveProduct(product: IProduct) {
+    return this.http.post(`${this.apiUrl}`, product);
+  }
+
   updateProduct(product: IProduct) {
     return this.http.put( `${this.apiUrl}/${product.id}`, product)
   }
