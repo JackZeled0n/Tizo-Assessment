@@ -1,13 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ProductService } from '../../services/product.service';
 import { takeUntil } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { IProduct } from '../../../../core/interfaces/products';
+import { AddProductComponent } from '../add-product/add-product.component';
 
 @Component({
   selector: 'app-product',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, AddProductComponent],
   templateUrl: './product.component.html',
   styleUrl: './product.component.css'
 })
@@ -19,6 +20,7 @@ export class ProductComponent implements OnInit {
   ) {}
 
   productsArray: IProduct[] = [];
+  @ViewChild(AddProductComponent) addProductComponent: AddProductComponent | undefined;
 
   ngOnInit(): void {
     this.getProducts();
@@ -56,5 +58,9 @@ export class ProductComponent implements OnInit {
 
   getValue(event: Event): string {
     return (event.target as HTMLInputElement).value;
+  }
+
+  openModal() {
+    this.addProductComponent?.openModal();
   }
 }

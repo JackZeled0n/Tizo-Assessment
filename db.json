@@ -18,19 +18,25 @@
       "id": "1",
       "name": "Coca-cola",
       "active": false,
-      "category": {
-        "id": "1",
-        "name": "drinks"
-      }
+      "categoryId": "1"
     },
     {
       "id": "2",
       "name": "Iphone",
       "active": false,
-      "category": {
-        "id": "2",
-        "name": "smartphones"
-      }
+      "categoryId": "2"
+    },
+    {
+      "id": "e72c9631ce8",
+      "name": "kola shaler",
+      "active": false,
+      "categoryId": "1"
+    },
+    {
+      "id": "9bd20a0a0ef",
+      "name": "raptor",
+      "active": true,
+      "categoryId": "1"
     }
   ],
   "categories": [
