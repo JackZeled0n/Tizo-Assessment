@@ -1,0 +1,76 @@
+{
+  "user": [
+    {
+      "id": "1",
+      "username": "testAdmin",
+      "role": "admin",
+      "password": "123"
+    },
+    {
+      "id": "2",
+      "username": "testUser",
+      "role": "user",
+      "password": "123"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "Coca-cola",
+      "active": false,
+      "categoryId": "1"
+    },
+    {
+      "id": "2",
+      "name": "Iphone",
+      "active": false,
+      "categoryId": "2"
+    },
+    {
+      "id": "e72c9631ce8",
+      "name": "kola shaler",
+      "active": false,
+      "categoryId": "1"
+    },
+    {
+      "id": "9bd20a0a0ef",
+      "name": "raptor",
+      "active": true,
+      "categoryId": "1"
+    },
+    {
+      "id": "197cd07b22f",
+      "name": "test",
+      "active": true,
+      "categoryId": "2"
+    },
+    {
+      "id": "9613b43b9f4",
+      "name": "jake",
+      "active": true,
+      "categoryId": "1"
+    },
+    {
+      "id": "69076716c6e",
+      "name": "pepsi",
+      "active": true,
+      "categoryId": "1"
+    },
+    {
+      "id": "30ac3bca6e1",
+      "name": "prix cola",
+      "active": true,
+      "categoryId": "1"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "drinks"
+    },
+    {
+      "id": "2",
+      "name": "smartphones"
+    }
+  ]
+}
