@@ -6,6 +6,7 @@ import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { uid } from 'uid';
 import { IProduct } from '../../../../core/interfaces/products';
 import { ProductService } from '../../services/product.service';
+import { ModalService } from '../../services/modal.service';
 
 @Component({
   selector: 'app-add-product',
@@ -18,12 +19,12 @@ export class AddProductComponent implements OnInit {
   addProductForm: FormGroup;
   category: ICategory[] = [];
   product: IProduct[] = [];
-  display: boolean = false;
 
   constructor(
     private categoryService: CategoryService,
     private formBuilder: FormBuilder,
-    private productService: ProductService
+    private productService: ProductService,
+    private modalService: ModalService
   ) {
     this.addProductForm = this.formBuilder.group({
       name: '',
@@ -55,6 +56,7 @@ export class AddProductComponent implements OnInit {
         next: (response) => {
           console.log('Product saved', response);
           this.closeModal();
+          this.modalService.notifySuccess('addProduct');
 
         },
         error: (error) => {
@@ -65,12 +67,7 @@ export class AddProductComponent implements OnInit {
     }
   }
 
-  openModal() {
-    this.addProductForm.reset();
-    this.display = true;
-  }
-
   closeModal() {
-    this.display = false;
+    this.modalService.closeModal('addProduct');
   }
 }

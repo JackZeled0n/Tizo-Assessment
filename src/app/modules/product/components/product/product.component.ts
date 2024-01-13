@@ -4,6 +4,7 @@ import { takeUntil } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { IProduct } from '../../../../core/interfaces/products';
 import { AddProductComponent } from '../add-product/add-product.component';
+import { ModalService } from '../../services/modal.service';
 
 @Component({
   selector: 'app-product',
@@ -16,7 +17,8 @@ export class ProductComponent implements OnInit {
   filteredProducts: IProduct[] = [];
 
   constructor(
-    private productService: ProductService
+    private productService: ProductService,
+    private modalService: ModalService
   ) {}
 
   productsArray: IProduct[] = [];
@@ -24,6 +26,9 @@ export class ProductComponent implements OnInit {
 
   ngOnInit(): void {
     this.getProducts();
+    this.modalService.success$('addProduct').subscribe(() => {
+      this.getProducts();
+    });
   }
 
   getProducts(): void {
@@ -60,7 +65,15 @@ export class ProductComponent implements OnInit {
     return (event.target as HTMLInputElement).value;
   }
 
-  openModal() {
-    this.addProductComponent?.openModal();
+  openModal(modalName: string) {
+    this.modalService.openModal(modalName);
+  }
+
+  closeModal(modalName: string) {
+    this.modalService.closeModal(modalName);
+  }
+
+  isModalOpen(modalName: string) {
+    return this.modalService.isModalOpen(modalName);
   }
 }

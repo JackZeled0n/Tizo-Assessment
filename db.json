@@ -37,6 +37,42 @@
       "name": "raptor",
       "active": true,
       "categoryId": "1"
+    },
+    {
+      "id": "197cd07b22f",
+      "name": "test",
+      "active": true,
+      "categoryId": "2"
+    },
+    {
+      "id": "9613b43b9f4",
+      "name": "jake",
+      "active": true,
+      "categoryId": "1"
+    },
+    {
+      "id": "69076716c6e",
+      "name": "pepsi",
+      "active": true,
+      "categoryId": "1"
+    },
+    {
+      "id": "30ac3bca6e1",
+      "name": "prix cola",
+      "active": true,
+      "categoryId": "1"
+    },
+    {
+      "id": "6323d8594b9",
+      "name": "big cola",
+      "active": false,
+      "categoryId": "1"
+    },
+    {
+      "id": "1a3a4f24954",
+      "name": "redbull",
+      "active": false,
+      "categoryId": "1"
     }
   ],
   "categories": [
