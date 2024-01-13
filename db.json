@@ -61,18 +61,6 @@
       "name": "prix cola",
       "active": true,
       "categoryId": "1"
-    },
-    {
-      "id": "6323d8594b9",
-      "name": "big cola",
-      "active": false,
-      "categoryId": "1"
-    },
-    {
-      "id": "1a3a4f24954",
-      "name": "redbull",
-      "active": false,
-      "categoryId": "1"
     }
   ],
   "categories": [
