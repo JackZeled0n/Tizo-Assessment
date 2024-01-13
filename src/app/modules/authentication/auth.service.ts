@@ -13,6 +13,7 @@ export class AuthenticationService {
   }
 
   login(username: string, password: string) {
+    //validate agains database is the user exist and credentials are valid
     const mockToken = this.jwtService.createMockJWT({ username, password });
     localStorage.setItem('token', mockToken);
   }
